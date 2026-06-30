@@ -1,37 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<h1>ArtGuessr</h1>
 
-    <title>ArtGuessr</title>
+<img id="art" src="images/starry_night.jpg" style="width:300px; filter: brightness(0);" />
 
-    <link rel="stylesheet" href="style.css">
-</head>
+<input id="guessInput" type="text" placeholder="Guess the artwork or artist..." />
+<button onclick="submitGuess()">Guess</button>
 
-<body>
-
-    <header>
-        <h1>ArtGuessr</h1>
-    </header>
-
-    <main>
-
-        <section>
-            <h2>Today's Painting:</h2>
-            <p>INSERT DATE HERE</p>
-            <img src=ArtToday>
-        </section>
-
-    </main>
-
-    <footer>
-        <p>© 2026 Your Name</p>
-    </footer>
-
-    <script src="script.js"></script>
-
-</body>
+<p id="result"></p>
 
 </html>
