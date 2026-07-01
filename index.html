@@ -1,13 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<h1>ArtGuessr</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<img id="art" src="images/starry_night.jpg" style="width:300px; filter: brightness(0);" />
+    <title>ArtGuessr</title>
 
-<input id="guessInput" type="text" placeholder="Guess the artwork or artist..." />
-<button onclick="submitGuess()">Guess</button>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-<p id="result"></p>
+<body>
+
+    <header>
+        <h1>🎨 ArtGuessr</h1>
+        <p>Can you identify today's artwork?</p>
+    </header>
+
+    <main>
+
+        <div class="image-container">
+
+            <img id="artImage" src="" alt="Today's artwork">
+
+        </div>
+
+        <div class="guess-section">
+
+            <input
+                id="guessInput"
+                type="text"
+                placeholder="Enter the artwork title..."
+                autocomplete="off"
+            >
+
+            <button id="guessButton">
+                Guess
+            </button>
+
+        </div>
+
+        <div id="message"></div>
+
+        <div id="answerBox" class="hidden">
+
+            <h2>Correct!</h2>
+
+            <p>
+                <strong>Title:</strong>
+                <span id="titleText"></span>
+            </p>
+
+            <p>
+                <strong>Artist:</strong>
+                <span id="artistText"></span>
+            </p>
+
+        </div>
+
+        <button id="revealButton">
+            Reveal Answer
+        </button>
+
+        <div class="stats">
+
+            <h3>Your Stats</h3>
+
+            <p>
+                Played:
+                <span id="gamesPlayed">0</span>
+            </p>
+
+            <p>
+                Wins:
+                <span id="gamesWon">0</span>
+            </p>
+
+            <p>
+                Current Streak:
+                <span id="currentStreak">0</span>
+            </p>
+
+            <p>
+                Best Streak:
+                <span id="bestStreak">0</span>
+            </p>
+
+        </div>
+
+    </main>
+
+    <footer>
+
+        <p>
+            A new artwork appears every day.
+        </p>
+
+    </footer>
+
+    <script src="data/artworks.js"></script>
+    <script src="app.js"></script>
+
+</body>
 
 </html>
